@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+body {
+  background: #654ea3;  /* fallback for old browsers */
+  background: #667db6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.MortgageCalc {
+  background-color: #79BEEE;
   color: white;
+  text-shadow: 2px 2px black;;
+  border-radius: 10px;
+  display: flex;
+  position: relative;;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 4vh auto;
+  text-align: center;
+  transition: .4s;
+  max-width: 600px;
+  height: auto;
+  padding: 5vh 0;
+  -webkit-box-shadow: -1px 4px 22px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 22px -5px rgba(0,0,0,0.75);
+  box-shadow: -1px 4px 22px -5px rgba(0,0,0,0.75);
 }
 
-.App-link {
-  color: #61dafb;
+#resetBtn, #calcBtn {
+  transition: .3s;
+  margin: 5px;
+  border: none;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #B7D3F2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+#resetBtn:hover, #calcBtn:hover {
+  background-color: #84AFE6;
+}
+.hidden {
+  opacity: 0;
+  position: absolute;
+}
+
+h1 {
+  width: 100%;
+  margin: 10% 0;
+}
+h2 {
+  margin: 1rem;
+}
+.Dropdown, input {
+  cursor: pointer;
+  text-align: center;
+  text-align-last: center;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #B7D3F2;
+}
+
+input {
+  cursor: text;
+}
+
+.Dropdown:focus, input:focus {
+  background-color: #84AFE6;
+  outline: 0px;
+}
+
+/* Responsiveness */
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .MortgageCalc {
+    margin: 2vh;
+    font-size: small;
   }
 }
