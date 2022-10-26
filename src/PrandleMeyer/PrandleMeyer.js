@@ -52,7 +52,7 @@ const PrandleMeyer = (props) => {
                 ></input>
             </div>
             {/* displays the total to the user */}
-            <h2>Upstream Mach Number:</h2>
+            <h2>Downstream Mach Number:</h2>
             <h2>{props.upstreamMachNumber}</h2>
             <h2>Prandle Meyer Angle 1 (deg):</h2>
             <h2>{props.prandleMeyerAngle1}</h2>
