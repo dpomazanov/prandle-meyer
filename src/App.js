@@ -147,15 +147,32 @@ class App extends Component {
     let mu1 = Math.asin(1/m1)*180/Math.PI
     let mu2 = Math.asin(1/m2)*180/Math.PI
 
+    // remove extra decimal places
+    var first2Str
+    first2Str = String(m2).slice(0, 6);
+    const m2_sliced = Number(first2Str);
+
+    first2Str = String(mu1).slice(0, 6);
+    const mu1_sliced = Number(first2Str);
+
+    first2Str = String(mu2).slice(0, 6);
+    const mu2_sliced = Number(first2Str);
+
+    first2Str = String(pm1).slice(0, 6);
+    const pm1_sliced = Number(first2Str);
+
+    first2Str = String(pm2).slice(0, 6);
+    const pm2_sliced = Number(first2Str);
+
     //show the reset button
     document.querySelector("#resetBtn").classList.remove("hidden");
     //set the state to the new calc'd value
     this.setState({
-      upstreamMachNumber: m2,
-      prandleMeyerAngle1: pm1,
-      prandleMeyerAngle2: pm2,
-      upstreamMachAngle: mu1,
-      downstreamMachAngle: mu2,
+      upstreamMachNumber: m2_sliced,
+      prandleMeyerAngle1: pm1_sliced,
+      prandleMeyerAngle2: pm2_sliced,
+      upstreamMachAngle: mu1_sliced,
+      downstreamMachAngle: mu2_sliced,
     })
   };
   render(){
